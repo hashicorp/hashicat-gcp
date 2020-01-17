@@ -1,2 +1,4 @@
 # hashicat-gcp
-Sample app for Terraform workshops
+Hashicat: A terraform built application for use in Hashicorp workshops
+
+Includes "Meow World" website.
