@@ -63,7 +63,7 @@ resource "google_compute_firewall" "http-server" {
 #     connection {
 #       type        = "ssh"
 #       user        = "ubuntu"
-#       timeout     = "500s"
+#       timeout     = "300s"
 #       private_key = tls_private_key.ssh-key.private_key_pem
 #       host        = google_compute_instance.hashicat.network_interface.0.access_config.0.nat_ip
 #     }
@@ -83,7 +83,7 @@ resource "google_compute_firewall" "http-server" {
 #     connection {
 #       type        = "ssh"
 #       user        = "ubuntu"
-#       timeout     = "500s"
+#       timeout     = "300s"
 #       private_key = tls_private_key.ssh-key.private_key_pem
 #       host        = google_compute_instance.hashicat.network_interface.0.access_config.0.nat_ip
 #     }
