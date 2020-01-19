@@ -11,11 +11,17 @@ variable "project" {
 }
 variable "prefix" {
   description = "This prefix will be included in the name of some resources."
+  default     = "workshop"
 }
 
 variable "region" {
   description = "The region where the resources are created."
   default     = "us-central1"
+}
+
+variable "zone" {
+  description = "The region where the resources are created."
+  default     = "us-central1-a"
 }
 
 variable "machine_type" {
