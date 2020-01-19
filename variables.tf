@@ -7,8 +7,7 @@
 
 
 variable "project" {
-  description = "Name of your GCP project"
-  default     = "hashicat-gcp-dev"
+  description = "Name of your GCP project. Make sure you set this up before running this terraform code.  REQUIRED."
 }
 variable "prefix" {
   description = "This prefix will be included in the name of some resources."
