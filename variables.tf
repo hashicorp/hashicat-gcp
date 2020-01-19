@@ -18,11 +18,6 @@ variable "region" {
   default     = "us-central1"
 }
 
-variable "zone" {
-  description = "The zone where the resources are created."
-  default     = "us-central1-a"
-}
-
 variable "machine_type" {
   description = "Specifies the GCP instance type."
   default     = "f1-micro"

@@ -1,7 +1,6 @@
 provider "google" {
   project = var.project
   region  = var.region
-  zone    = var.zone
 }
 
 resource "tls_private_key" "ssh-key" {
