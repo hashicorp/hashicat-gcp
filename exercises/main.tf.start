@@ -26,6 +26,7 @@ resource "google_compute_firewall" "http-server" {
 # resource "google_compute_instance" "hashicat" {
 #   name         = "${var.prefix}-hashicat"
 #   machine_type = var.machine_type
+#   zone         = var.zone
 
 #   boot_disk {
 #     initialize_params {
