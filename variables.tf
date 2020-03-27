@@ -23,6 +23,11 @@ variable "zone" {
   default     = "us-central1-b"
 }
 
+variable "subnet_prefix" {
+  description = "The address prefix to use for the subnet."
+  default     = "10.0.10.0/24"
+}
+
 variable "machine_type" {
   description = "Specifies the GCP instance type."
   default     = "f1-micro"
