@@ -19,8 +19,8 @@ variable "region" {
 }
 
 variable "zone" {
-  description = "The region where the resources are created."
-  default     = "us-central1-a"
+  description = "The zone where the resources are created."
+  default     = "us-central1-b"
 }
 
 variable "machine_type" {
