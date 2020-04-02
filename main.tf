@@ -1,21 +1,28 @@
 provider "google" {
+  version = "~> 2.0"  
   project = var.project
   region  = var.region
-  zone    = var.zone
 }
 
-resource "tls_private_key" "ssh-key" {
-  algorithm = "RSA"
-  rsa_bits  = "4096"
+resource "google_compute_network" "hashicat" {
+  name                    = "${var.prefix}-vpc"
+  auto_create_subnetworks = false
+}
+
+resource "google_compute_subnetwork" "hashicat" {
+  name          = "${var.prefix}-subnet"
+  region        = var.region
+  network       = google_compute_network.hashicat.self_link
+  ip_cidr_range = var.subnet_prefix
 }
 
 resource "google_compute_firewall" "http-server" {
-  name    = "default-allow-http"
-  network = "default"
+  name    = "default-allow-ssh-http"
+  network = google_compute_network.hashicat.self_link
 
   allow {
     protocol = "tcp"
-    ports    = ["80"]
+    ports    = ["22", "80"]
   }
 
   // Allow traffic from everywhere to instances with an http-server tag
@@ -23,8 +30,14 @@ resource "google_compute_firewall" "http-server" {
   target_tags   = ["http-server"]
 }
 
+resource "tls_private_key" "ssh-key" {
+  algorithm = "RSA"
+  rsa_bits  = "4096"
+}
+
 resource "google_compute_instance" "hashicat" {
   name         = "${var.prefix}-hashicat"
+  zone         = "${var.region}-b"
   machine_type = var.machine_type
 
   boot_disk {
@@ -34,7 +47,7 @@ resource "google_compute_instance" "hashicat" {
   }
 
   network_interface {
-    network = "default"
+    subnetwork = google_compute_subnetwork.hashicat.self_link
     access_config {
     }
   }

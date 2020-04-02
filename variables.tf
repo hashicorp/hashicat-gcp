@@ -11,7 +11,6 @@ variable "project" {
 
 variable "prefix" {
   description = "This prefix will be included in the name of some resources. You can use your own name or any other short string here."
-  default     = "workshop"
 }
 
 variable "region" {
@@ -20,8 +19,13 @@ variable "region" {
 }
 
 variable "zone" {
-  description = "The region where the resources are created."
-  default     = "us-central1-a"
+  description = "The zone where the resources are created."
+  default     = "us-central1-b"
+}
+
+variable "subnet_prefix" {
+  description = "The address prefix to use for the subnet."
+  default     = "10.0.10.0/24"
 }
 
 variable "machine_type" {
