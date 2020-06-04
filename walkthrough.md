@@ -42,6 +42,8 @@ Next you can edit the file using the Cloud Shell editor:
 cloudshell edit terraform.tfvars
 ```
 
+First you should uncomment both the **prefix** and **project** lines by deleting the `#` symbol at the beginning.
+
 Replace the **prefix** and **project** variables with your own. Prefix can be any short string of lower-case letters, and project needs to match the Project ID you created above.
 
 Click **Next** to proceed.
