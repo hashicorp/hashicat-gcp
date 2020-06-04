@@ -73,11 +73,7 @@ Here we run `terraform apply` to actually implement our changes and build real i
 terraform apply
 ```
 
-Wait for a few minutes as your Terraform code builds the Meow World application. If you like you can browse through the main.tf file to see the code that is used to build our VM and install the app:
-
-```bash
-cloudshell edit main.tf
-```
+Wait for a few minutes as your Terraform code builds the Meow World application. Click on **main.tf** in the text editor if you'd like to browse through the code that builds the app.
 
 Click **Next** to proceed.
 
