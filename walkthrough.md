@@ -10,7 +10,7 @@ Click the **Start** button to move to the next step.
 ## What is Terraform?
 Terraform code is easy to learn and can be used to build any type of Google Compute infrastructure. Terraform is pre-installed on your Google Cloud workstation. Go ahead and try running the `terraform version` command now:
 
-```
+```bash
 terraform version
 ```
 
@@ -32,13 +32,13 @@ Click **Next** to proceed.
 ## Edit Terraform Variables
 In order for Terraform to work we need to provide two variables in a config file named `terraform.tfvars`. Rename the sample `terraform.tfvars.example` file with the following command:
 
-```
+```bash
 mv terraform.tfvars.example terraform.tfvars
 ```
 
 Next you can edit the file using the Cloud Shell editor:
 
-```
+```bash
 cloudshell edit terraform.tfvars
 ```
 
@@ -49,7 +49,7 @@ Click **Next** to proceed.
 ## Run Terraform Init
 Next you can run the `terraform init` command. When you run it Terraform will analyze your code and download any required providers that it needs to build your infrastructure. 
 
-```
+```bash
 terraform init
 ```
 
@@ -58,7 +58,7 @@ Click **Next** to proceed.
 ## Run Terraform Plan
 Terraform comes with the ability to do a 'dry run'. This is also known as `terraform plan`. Run it now to see what would be built if you applied the code:
 
-```
+```bash
 terraform plan
 ```
 
@@ -67,13 +67,13 @@ Click **Next** to proceed.
 ## Run Terraform Apply
 Here we run `terraform apply` to actually implement our changes and build real infrastructure. You'll need to respond 'yes' to confirm the run. Try it now:
 
-```
+```bash
 terraform apply
 ```
 
 Wait for a few minutes as your Terraform code builds the Meow World application. If you like you can browse through the main.tf file to see the code that is used to build our VM and install the app:
 
-```
+```bash
 cloudshell edit main.tf
 ```
 
@@ -94,7 +94,7 @@ Click **Next** to proceed.
 ## Terraform Destroy
 You can clean up everything you built with the `terraform destroy` command. Try it now:
 
-```
+```bash
 terraform destroy
 ```
 
