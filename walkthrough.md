@@ -21,11 +21,11 @@ Click **Next** to proceed to the next step.
 ## Create a Google Cloud Project
 You can use an existing Google Cloud Project or create a new one. The project menu is right at the top of your Google Cloud Platform dashboard:
 
-https://console.cloud.google.com/home/dashboard
+[https://console.cloud.google.com/home/dashboard](https://console.cloud.google.com/home/dashboard)
 
 Once you have created a project (or selected an existing one), you'll need to enable the Compute Engine API. Visit the APIs dashboard and click on the `+Enable APIs and Services` button. Search for 'compute' and select the **Compute Engine API**. Click on the blue **Enable** button.
 
-https://console.cloud.google.com/apis/dashboard
+[https://console.cloud.google.com/apis/dashboard](https://console.cloud.google.com/apis/dashboard)
 
 Click **Next** to proceed.
 
@@ -102,4 +102,4 @@ You'll need to confirm your intention by typing `yes` again. This is to help pre
 
 Nice work. If you'd like to learn more about Terraform on Google Cloud Platform visit the following link:
 
-https://cloud.google.com/community/tutorials/getting-started-on-gcp-with-terraform
+[https://cloud.google.com/community/tutorials/getting-started-on-gcp-with-terraform](https://cloud.google.com/community/tutorials/getting-started-on-gcp-with-terraform)
