@@ -62,7 +62,6 @@ resource "google_compute_instance" "hashicat" {
     department="devops",
     billable="true"
   }
-
 }
 
 resource "null_resource" "configure-cat-app" {
