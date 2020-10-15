@@ -58,6 +58,10 @@ resource "google_compute_network" "hashicat" {
 
 #   tags = ["http-server"]
 
+#    labels = {
+#       name = "hashicat"
+#    }
+
 # }
 
 # resource "null_resource" "configure-cat-app" {
