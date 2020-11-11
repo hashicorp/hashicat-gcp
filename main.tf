@@ -25,7 +25,7 @@ resource "google_compute_firewall" "http-server" {
     ports    = ["22", "80"]
   }
 
-  // Allow traffic from everywhere to instances with an http-server tag
+  // Allow traffic from everywhere to instances with an http-server tags
   source_ranges = ["0.0.0.0/0"]
   target_tags   = ["http-server"]
 }
