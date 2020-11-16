@@ -1,7 +1,7 @@
 # hashicat-gcp
 HashiCat: A Terraform built application for use in HashiCorp workshops
 
-# testing123
+# via CLI
 
 Includes "Meow World" website.
 
