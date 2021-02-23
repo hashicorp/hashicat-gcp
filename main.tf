@@ -100,6 +100,7 @@ resource "null_resource" "configure-cat-app" {
     ]
 
     connection {
+      
       type        = "ssh"
       user        = "ubuntu"
       timeout     = "300s"
