@@ -3,7 +3,7 @@ HashiCat: A Terraform built application for use in HashiCorp workshops
 
 Includes "Meow World" website.
 
-[![CircleCI](https://circleci.com/gh/hashicorp/hashicat-gcps.svg?style=svg)](https://circleci.com/gh/hashicorp/hashicat-gcp)
+[![CircleCI](https://circleci.com/gh/hashicorp/hashicat-gcp.svg?style=svg)](https://circleci.com/gh/hashicorp/hashicat-gcp)
 
 You can try this code out in Google Cloud Shell! Click below to clone the repo into your Cloud Shell environment. You will also need a project with the Compute Engine APIs enabled in order to execute the terraform code.
 
