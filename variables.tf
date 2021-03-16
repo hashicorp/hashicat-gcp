@@ -49,5 +49,5 @@ variable "placeholder" {
 }
 
 variable "network_name" {
-  default = "network_hddh"
+  default = "network-hddh"
 }
