@@ -49,5 +49,5 @@ variable "placeholder" {
 }
 
 variable "network_name" {
-  default = "network-hddh"
+  default = "gaurav-subnet"
 }
