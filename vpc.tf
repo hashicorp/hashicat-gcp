@@ -1,6 +1,6 @@
-module "network" {
-  source  = "app.terraform.io/HDDH/network/google"
-  version = "2.5.0"
+module "network_vpc" {
+  source  = "app.terraform.io/HDDH/network/google//modules/vpc"
+  version = "3.2.0"
   subnets = [
   {
     subnet_name   = "gaurav-subnet"
