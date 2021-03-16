@@ -1,8 +1,14 @@
-module "vpc" {
-  source  = "app.terraform.io/HDDH/network/google//modules/vpc"
+module "network" {
+  source  = "app.terraform.io/HDDH/network/google"
   version = "2.5.0"
+    project_id = var.project
+    network_name = var.network_name
 
-  project_id = var.project
-  network_name = var.network_name
-
+    subnets = [
+  {
+    subnet_name   = "gaurav-subnet"
+    subnet_ip     = "10.100.10.0/24"
+    subnet_region = var.region
+  }
+]
 }
