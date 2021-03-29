@@ -1,5 +1,5 @@
 provider "google" {
-  version = "~> 2.0"  
+  version = "~> 2.0"
   project = var.project
   region  = var.region
 }
@@ -57,7 +57,7 @@ resource "google_compute_instance" "hashicat" {
   }
 
   tags = ["http-server"]
-  
+
   labels = {
     name = "hashicat"
   }
@@ -88,7 +88,6 @@ resource "null_resource" "configure-cat-app" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo echo 'deb http://archive.ubuntu.com/ubuntu trusty main universe restricted multiverse' > /etc/apt/sources.list",
       "sudo apt -y update",
       "sudo apt -y install apache2",
       "sudo systemctl start apache2",
