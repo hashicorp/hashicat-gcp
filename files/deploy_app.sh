@@ -12,7 +12,7 @@ cat << EOM > /var/www/html/index.html
   <center><img src="http://${PLACEHOLDER}/${WIDTH}/${HEIGHT}"></img></center>
   <center><h2>Meow World!</h2></center>
   Welcome to ${PREFIX}'s app. 
-  My sweet change
+  Best cat in the world
   <!-- END -->
 
   </div>
