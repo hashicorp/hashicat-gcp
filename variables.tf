@@ -15,12 +15,12 @@ variable "prefix" {
 
 variable "region" {
   description = "The region where the resources are created."
-  default     = "us-central1"
+  default     = "us-east1"
 }
 
 variable "zone" {
   description = "The zone where the resources are created."
-  default     = "us-central1-b"
+  default     = "us-east1-a"
 }
 
 variable "subnet_prefix" {
