@@ -11,8 +11,8 @@ cat << EOM > /var/www/html/index.html
   <!-- BEGIN -->
   <center><img src="http://${PLACEHOLDER}/${WIDTH}/${HEIGHT}"></img></center>
   <center><h2>Meow World!</h2></center>
-  Welcome to catchy marketing slogan for ACME. Don't bother, we are out
-  of stock and steam, anyway.
+  Welcome to the catchy marketing slogan for ACME. Please be sure to eat the
+  cat before proceeding.
   <!-- END -->
 
   </div>
