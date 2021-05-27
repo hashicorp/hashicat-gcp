@@ -1,4 +1,5 @@
-##############################################################################
+ --version
+ ##############################################################################
 # Variables File
 #
 # Here is where we store the default values for all the variables used in our
