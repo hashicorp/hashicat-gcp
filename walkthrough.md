@@ -27,10 +27,16 @@ Once you have created a project (or selected an existing one), you'll need to en
 
 [https://console.cloud.google.com/apis/dashboard](https://console.cloud.google.com/apis/dashboard)
 
+Now in the cloudshell terminal run the following command to set your project as a Terraform environment variable. Make sure to replace my-project-id with your own!
+
+```bash
+export TF_VAR_project="my-project-id"
+```
+
 Click **Next** to proceed.
 
 ## Edit Terraform Variables
-In order for Terraform to work we need to provide two variables in a config file named `terraform.tfvars`. Rename the sample `terraform.tfvars.example` file with the following command:
+In order for Terraform to work we need to edit a config file named `terraform.tfvars`. Rename the sample `terraform.tfvars.example` file with the following command:
 
 ```bash
 mv terraform.tfvars.example terraform.tfvars
@@ -42,9 +48,9 @@ Next you can edit the file using the Cloud Shell editor:
 cloudshell edit terraform.tfvars
 ```
 
-First you should uncomment both the **prefix** and **project** lines by deleting the `#` symbol at the beginning.
+First you should uncomment the **prefix** line by deleting the `#` symbol at the beginning.
 
-Replace the **prefix** and **project** variables with your own. Prefix can be any short string of lower-case letters, and project needs to match the Project ID you created above.
+Replace the **prefix** variable with your own. The prefix can be any short string of lower-case letters.
 
 Click **Next** to proceed.
 
