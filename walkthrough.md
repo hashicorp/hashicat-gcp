@@ -27,6 +27,12 @@ Once you have created a project (or selected an existing one), you'll need to en
 
 [https://console.cloud.google.com/apis/dashboard](https://console.cloud.google.com/apis/dashboard)
 
+Now in the cloudshell terminal run the following command to set your project. Make sure to replace my-project-id with your own!
+
+```bash
+gcloud config set project my-project-id
+```
+
 Click **Next** to proceed.
 
 ## Edit Terraform Variables
