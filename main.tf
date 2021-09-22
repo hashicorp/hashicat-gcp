@@ -25,7 +25,7 @@ resource "google_compute_subnetwork" "hashicat" {
 }
 
 resource "google_compute_firewall" "http-server" {
-  name    = "default-allow-ssh-http"
+  name    = "${var.prefix}-default-allow-ssh-http"
   network = google_compute_network.hashicat.self_link
 
   allow {
