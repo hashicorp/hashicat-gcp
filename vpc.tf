@@ -1,6 +1,6 @@
 module "network" {
   source  = "app.terraform.io/instruqt-circleci/network/google"
-  version = "3.2.2"
+  version = "3.4.0"
   network_name = "gaurav-network"
   project_id = var.project
   subnets = [
