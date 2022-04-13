@@ -17,6 +17,7 @@
      
 module "terraform-google-network" {
   source     = "github.com/lackingimagination/terraform-google-network"
+  version      = "~> 5.0.0"
   project_id = var.project_id
   name       = "gunthers_network"
   subnets = [
