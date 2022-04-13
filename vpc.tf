@@ -19,11 +19,11 @@ module "terraform-google-network" {
   source     = "github.com/lackingimagination/terraform-google-network"
   project_id = var.project_id
   name       = "gunthers_network"
-  subnets = [
-    {
-      ip                  = "10.100.10.0/24"
-      name                = "gunthers_subnet"
-      region              = var.region
-    }
-  ]
+subnets = [
+  {
+    subnet_name   = "gaurav-subnet"
+    subnet_ip     = "10.100.10.0/24"
+    subnet_region = var.region
+  }
+]
 }
