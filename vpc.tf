@@ -21,7 +21,7 @@ module "terraform-google-network" {
   name       = "gunthers_network"
   subnets = [
     {
-      ip_cidr_range       = "10.100.10.0/24"
+      ip                  = "10.100.10.0/24"
       name                = "gunthers_subnet"
       region              = var.region
     }
