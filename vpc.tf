@@ -14,19 +14,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-# [START vpc_auto_create]
-resource "google_compute_network" "vpc_network" {
-  project                 = var.project
-  name                    = "gaurav-network"
-  auto_create_subnetworks = true
-  mtu                     = 1460
+     
+module "terraform-google-network" {
+  source     = "github.com/lackingimagination/terraform-google-network"
+  project_id = var.project_id
+  name       = "gunthers_network"
   subnets = [
-  {
-    subnet_name   = "gaurav-subnet"
-    subnet_ip     = "10.100.10.0/24"
-    subnet_region = var.region
-  }
-]
+    {
+      ip_cidr_range       = "10.100.10.0/24"
+      name                = "gunthers_subnet"
+      region              = var.region
+    }
+  ]
 }
-# [END vpc_auto_create]
