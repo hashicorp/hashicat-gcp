@@ -1,35 +1,39 @@
 module "vpc" {
-    source  = "terraform-google-modules/network/google"
-    version = "~> 4.0"
+  source  = "terraform-google-modules/network/google"
+  version = "2.5.0"
 
-    project_id   = var.project
-    network_name = "gaurav-network"
+  project_id   = var.project
+  network_name = "gaurav-network"
+  routing_mode = "REGIONAL"
 
-    subnets = [
-        {
-            subnet_name           = "subnet-01"
-            subnet_ip             = "10.10.10.0/24"
-            subnet_region         = var.region
-        },
-        {
-            subnet_name           = "subnet-02"
-            subnet_ip             = "10.10.20.0/24"
-            subnet_region         = var.region
-            subnet_private_access = "true"
-            subnet_flow_logs      = "true"
-            description           = "This subnet has a description"
-        },
-        {
-            subnet_name                  = "subnet-03"
-            subnet_ip                    = "10.10.30.0/24"
-            subnet_region                = var.region
-            subnet_flow_logs             = "true"
-            subnet_flow_logs_interval    = "INTERVAL_10_MIN"
-            subnet_flow_logs_sampling    = 0.7
-            subnet_flow_logs_metadata    = "INCLUDE_ALL_METADATA"
-            subnet_flow_logs_filter_expr = "true"
-        }
-    ]
+  delete_default_internet_gateway_routes = "true"
+
+  subnets = [
+    {
+      subnet_name           = "public"
+      subnet_ip             = "10.0.0.0/24"
+      subnet_region         = var.region
+      subnet_private_access = "false"
+      subnet_flow_logs      = "false"
+    },
+    {
+      subnet_name           = "private"
+      subnet_ip             = "10.0.1.0/24"
+      subnet_region         = var.region
+      subnet_private_access = "true"
+      subnet_flow_logs      = "false"
+    }
+  ]
+
+  routes = [
+    {
+      name              = "egress-internet"
+      description       = "Default route through IGW to access internet"
+      destination_range = "0.0.0.0/0"
+      next_hop_internet = "true"
+    }
+  ]
+}
 
     secondary_ranges = {
         subnet-01 = [
