@@ -10,8 +10,8 @@ module "vpc" {
 
   subnets = [
     {
-      subnet_name           = "public"
-      subnet_ip             = "10.0.0.0/24"
+      subnet_name           = "gaurav-subnet"
+      subnet_ip             = "10.100.10.0/24"
       subnet_region         = var.project
       subnet_private_access = "false"
       subnet_flow_logs      = "false"
