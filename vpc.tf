@@ -12,14 +12,14 @@ module "vpc" {
     {
       subnet_name           = "public"
       subnet_ip             = "10.0.0.0/24"
-      subnet_region         = var.region
+      subnet_region         = var.project
       subnet_private_access = "false"
       subnet_flow_logs      = "false"
     },
     {
       subnet_name           = "private"
       subnet_ip             = "10.0.1.0/24"
-      subnet_region         = var.region
+      subnet_region         = var.project
       subnet_private_access = "true"
       subnet_flow_logs      = "false"
     }
@@ -33,16 +33,4 @@ module "vpc" {
       next_hop_internet = "true"
     }
   ]
-}
-
-    secondary_ranges = {
-        subnet-01 = [
-            {
-                range_name    = "subnet-01-secondary-01"
-                ip_cidr_range = "192.168.64.0/24"
-            },
-        ]
-
-        subnet-02 = []
-    }
 }
