@@ -4,9 +4,8 @@ module "vpc" {
 
   project_id   = var.project
   network_name = "gaurav-network"
-  routing_mode = "REGIONAL"
-
-  delete_default_internet_gateway_routes = "true"
+  
+  
 
   subnets = [
     {
