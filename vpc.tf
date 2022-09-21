@@ -17,12 +17,4 @@ module "vpc" {
       subnet_flow_logs      = "false"
     },
   ]
-  routes = [
-    {
-      name              = "egress-internet"
-      description       = "Default route through IGW to access internet"
-      destination_range = "0.0.0.0/0"
-      next_hop_internet = "true"
-    }
-  ]
 }
