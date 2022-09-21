@@ -12,8 +12,7 @@ module "vpc" {
       subnet_name           = "subnet"
       subnet_ip             = "10.100.10.0/24"
       subnet_region         = var.project
-      subnet_private_access = "false"
-      subnet_flow_logs      = "false"
-    },
+      
+    }
   ]
 }
