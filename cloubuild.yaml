@@ -2,9 +2,6 @@
 # $ gcloud builds submit . --config=cloudbuild.yaml --substitutions _BUCKET='<bucket name>'
 steps:
 - name: 'gcr.io/${PROJECT_ID}/terraform'
-  args: ['init']
-- name: 'gcr.io/${PROJECT_ID}/terraform'
-  args: ['plan']
-- name: 'gcr.io/${PROJECT_ID}/terraform'
-  args: ['apply']
+  args: 
+   - init
 tags: ['Ameya']
