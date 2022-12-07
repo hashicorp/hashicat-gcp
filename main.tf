@@ -7,9 +7,23 @@ terraform {
   }
 }
 
+
 provider "google" {
   project = var.project
   region  = var.region
+}
+
+terraform {
+  backend "remote" {
+    organization = "ameyabak"
+
+    workspaces {
+      name = "hashicat-gcp"
+    }
+  }
+}
+credentials "app.terraform.io" {
+  token = "8LQRyDpfj0x1Aw.atlasv1.l18okDyaIaqTfI4SanbQPEqDUEh8iIHyV0ykkqHOKF0MRDiuR1fNdlWyxI7UpwEdX8c"
 }
 
 resource "google_compute_network" "hashicat" {
