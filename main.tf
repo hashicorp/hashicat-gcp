@@ -23,7 +23,7 @@ terraform {
   }
 }
 credentials "app.terraform.io" {
-  token = "8LQRyDpfj0x1Aw.atlasv1.l18okDyaIaqTfI4SanbQPEqDUEh8iIHyV0ykkqHOKF0MRDiuR1fNdlWyxI7UpwEdX8c"
+  token = ""
 }
 
 resource "google_compute_network" "hashicat" {
