@@ -12,20 +12,6 @@ provider "google" {
   project = var.project
   region  = var.region
 }
-
-terraform {
-  backend "remote" {
-    organization = "ameyabak"
-
-    workspaces {
-      name = "hashicat-gcp"
-    }
-  }
-}
-credentials "app.terraform.io" {
-  token = ""
-}
-
 resource "google_compute_network" "hashicat" {
   name                    = "${var.prefix}-vpc-${var.region}"
   auto_create_subnetworks = false
