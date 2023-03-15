@@ -1,6 +1,6 @@
 //--------------------------------------------------------------------
 // Variables
-variable "network_project_id" {}
+// variable "network_project_id" {}
 
 //--------------------------------------------------------------------
 // Modules
@@ -9,6 +9,6 @@ module "network" {
   version = "3.5.0"
 
   network_name = "bslee1-vpc-us-east1"
-  project_id = "${var.network_project_id}"
+  project_id = "123"
   subnets = "bslee1-subnet"
 }
