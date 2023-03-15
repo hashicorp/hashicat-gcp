@@ -1,8 +1,4 @@
 //--------------------------------------------------------------------
-// Variables
-// variable "network_project_id" {}
-
-//--------------------------------------------------------------------
 // Modules
 module "network" {
   source  = "app.terraform.io/bslee/network/google"
