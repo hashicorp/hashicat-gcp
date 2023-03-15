@@ -4,7 +4,7 @@ module "network" {
   source  = "app.terraform.io/bslee/network/google"
   version = "3.4.0"
 
-  network_name = "gaurav-network"
+  network_name = "bslee1-vpc-us-east1"
   project_id = "${var.project}"
   subnets = [
   {
