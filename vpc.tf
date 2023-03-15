@@ -10,5 +10,5 @@ module "network" {
 
   network_name = "bslee1-vpc-us-east1"
   project_id = "123"
-  subnets = "bslee1-subnet"
+  subnets = "10.100.10.0/24"
 }
