@@ -17,7 +17,7 @@ provider "google" {
 
 resource "google_compute_network" "hashicat" {
   name                    = "${var.prefix}-vpc-${var.region}"
-  auto_create_subnetworks = false
+#  auto_create_subnetworks = false
 }
 
 resource "google_compute_subnetwork" "hashicat" {
