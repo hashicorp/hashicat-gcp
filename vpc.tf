@@ -6,7 +6,7 @@
 // Modules
 module "network" {
   source  = "app.terraform.io/bslee/network/google"
-  version = "3.5.0"
+  version = "3.4.0"
 
   network_name = "gaurav-network"
   project_id = "123"
