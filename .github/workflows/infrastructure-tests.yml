@@ -24,7 +24,7 @@ jobs:
           # zealous in protecting secrets will randomly mangle the
           # various GHA contexts we use by replacing "{" and "}" bits
           # with "***"
-          GOOGLE_CREDENTIALS=$(base64 -d <<<"{{ secrets.GOOGLE_CREDENTIALS_JSON_BASE64 }}")
+          GOOGLE_CREDENTIALS=$(base64 -d <<<"${{ secrets.GOOGLE_CREDENTIALS_JSON_BASE64 }}")
           # NOTE: Where we typically use 'EOF' as a heredoc delimiter, following
           # the security advice in
           # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
