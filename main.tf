@@ -46,6 +46,12 @@ resource "tls_private_key" "ssh-key" {
   rsa_bits  = "4096"
 }
 
+// Create VPC
+resource "google_compute_network" "vpc" {
+ name                    = "${var.project}-vpc"
+ auto_create_subnetworks = false
+}
+
 resource "google_compute_instance" "hashicat" {
   name         = "${var.prefix}-hashicat"
   zone         = "${var.region}-b"
