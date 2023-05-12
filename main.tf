@@ -50,8 +50,6 @@ resource "google_compute_instance" "hashicat" {
   name         = "${var.prefix}-hashicat"
   zone         = "${var.region}-b"
   machine_type = var.machine_type
-  department   = "devops"
-  billable     = "true"
 
 
   boot_disk {
