@@ -3,7 +3,7 @@ module "vpc" {
     version = "~> 3.4.0"
 
     project_id   = var.project 
-    network_name = "redbeard-network-03"
+    network_name = "redbeard-network-04"
 
     shared_vpc_host = false
 }
