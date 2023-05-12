@@ -3,7 +3,7 @@ module "vpc" {
     version = "~> 3.4.0"
 
     project_id   = var.project 
-    network_name = "rebeard-network"
+    network_name = "redbeard-network"
 
     subnets = [
         {
