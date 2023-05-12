@@ -4,12 +4,4 @@ module "vpc" {
 
     project_id   = var.project 
     network_name = "redbeard-network"
-
-    subnets = [
-        {
-            subnet_name           = "redbeard-subnet-01"
-            subnet_ip             = "10.100.10.0/24"
-            subnet_region         = var.region 
-        }
-    ]
 }
