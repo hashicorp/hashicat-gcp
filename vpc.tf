@@ -1,9 +1,16 @@
 module "vpc" {
-    source  = "terraform-google-modules/network/google//modules/vpc"
-    version = "~> 3.4.0"
+    source  = "terraform-google-modules/network/google"
+    version = "~> 3.0"
 
     project_id   = var.project 
-    network_name = "redbeard-network-04"
+    network_name = "redbeard-network-05"
+    routing_mode = "GLOBAL"
 
-    shared_vpc_host = false
+    subnets = [
+        {
+            subnet_name           = "redbeard-subnet-05"
+            subnet_ip             = "10.100.10.0/24"
+            subnet_region         = var.region
+        }
+    ]
 }
