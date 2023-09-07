@@ -14,7 +14,7 @@ cat << EOM > /var/www/html/index.html
   <!-- BEGIN -->
   <center><img src="http://${PLACEHOLDER}/${WIDTH}/${HEIGHT}"></img></center>
   <center><h2>Meow World!</h2></center>
-  Welcome to ${PREFIX}'s random meow app! Nullam placerat, erat in ultrices luctus, libero leo auctor tellus, id congue sapien diam et dolor. Nulla placerat, turpis in lobortis dictum, lacus risus blandit tellus, ac placerat lectus tortor eu eros. Donec arcu eros, tincidunt ultrices suscipit scelerisque, feugiat vitae mauris. Mauris consequat rhoncus leo ac eleifend. Maecenas sollicitudin, dui a fringilla convallis, quam felis ultricies odio, quis interdum ante elit non enim. Etiam commodo elit et vehicula ullamcorper. ..!
+  Welcome to ${PREFIX}'s random meow app!
   <!-- END -->
 
   </div>
