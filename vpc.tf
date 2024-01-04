@@ -1,6 +1,6 @@
 module "network" {
-  source  = "app.terraform.io/sjh/network/google"
-  # version = "3.4.1"
+  source  = "terraform-google-modules/network/google"
+  version = "6.0.0"
   # insert required variables here
 
   network_name = "sjh"
