@@ -5,7 +5,6 @@ terraform {
   required_providers {
     google = {
       source  = "hashicorp/google"
-      version = "=3.68.0"
     }
   }
 }
@@ -70,6 +69,7 @@ resource "google_compute_instance" "hashicat" {
 
   labels = {
     name = "hashicat"
+    department = "devops"
   }
 
 }
